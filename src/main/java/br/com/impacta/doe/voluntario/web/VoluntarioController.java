@@ -16,13 +16,13 @@ public class VoluntarioController {
         return voluntarioService.salva(dto);
     }
 
-    @PostMapping("/aceita/{id}")
-    public VoluntarioDto aceita(@RequestParam Long id) {
+    @PutMapping("/aceita/{id}")
+    public VoluntarioDto aceita(@PathVariable Long id) {
         return voluntarioService.aceita(id);
     }
 
-    @PostMapping("/cancelaInscricao/{id}")
-    public VoluntarioDto cancela(@RequestParam Long id) {
-        return voluntarioService.aceita(id);
+    @PutMapping("/cancelaInscricao/{id}")
+    public VoluntarioDto cancela(@PathVariable Long id) {
+        return voluntarioService.cancelaInscrição(id);
     }
 }
